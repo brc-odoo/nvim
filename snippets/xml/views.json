@@ -1,0 +1,35 @@
+{
+    "Odoo XML": {
+        "prefix": "odoo",
+        "language": "xml",
+        "body": [
+            "<?xml version=\"1.0\" encoding=\"utf-8\"?>",
+            "<odoo>",
+            "\t$0",
+            "</odoo>"
+        ]
+    },
+    "Field XML": {
+        "prefix": "field",
+        "language": "xml",
+        "body": [
+            "<field name=\"$1\"/>$0"
+        ]
+    },
+    "Inherit View": {
+        "prefix": "inherit",
+        "language": "xml",
+        "body": [
+            "<record id=\"$1\" model=\"ir.ui.view\">",
+            "\t<field name=\"name\">$2</field>",
+            "\t<field name=\"model\">$3</field>",
+            "\t<field name=\"inherit_id\" ref=\"$4\"/>",
+            "\t<field name=\"arch\" type=\"xml\">",
+            "\t\t<xpath expr=\"//field[@name='$5']\" position=\"after\">",
+            "\t\t\t$0",
+            "\t\t</xpath>",
+            "\t</field>",
+            "</record>"
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+	"OdooManifest": {
+		"prefix": "manifest",
+		"description": "Create an Odoo Manifest",
+		"body": [
+			"{",
+				"\t'name': '$1',",
+				"\t'description': \"\"\"",
+				"\t\t[$2]",
+				"\t\t\"\"\",",
+				"\t'author': 'Odoo Inc',",
+				"\t'website': 'https://www.odoo.com/',",
+				"\t'category': 'Custom Development',",
+				"\t'version': '1.0',",
+				"\t'license': 'OPL-1',",
+				"\t'depends': ['$0'],",
+				"\t'data': [",
+				"\t],",
+				"}"
+		]
+	}
+}

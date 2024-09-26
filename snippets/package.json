@@ -1,0 +1,19 @@
+{
+	"name": "odoo-snippets",
+	"contributes": {
+		"snippets": [
+			{
+				"language": [
+					"python"
+				],
+				"path": "./python/module.json"
+			},
+			{
+				"language": [
+					"xml"
+				],
+				"path": "./xml/views.json"
+			}
+		]
+	}
+}
