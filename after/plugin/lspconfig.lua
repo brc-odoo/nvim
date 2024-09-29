@@ -1,4 +1,8 @@
 local lspconfig = require('lspconfig')
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
+
+local servers = { 'pylsp', 'eslint' }
 
 lspconfig.pylsp.setup{
 	settings = {
@@ -27,7 +31,7 @@ lspconfig.pylsp.setup{
 	},
 	flags = {
 		debounce_text_changes = 200,
-	}
+	},
 }
 lspconfig.eslint.setup({
 	on_attach = function(client, bufnr)
@@ -37,3 +41,9 @@ lspconfig.eslint.setup({
 		})
 	end,
 })
+
+for _, lsp in ipairs(servers) do
+    lspconfig[lsp].setup {
+        capabilities = capabilities
+    }
+end
