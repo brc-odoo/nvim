@@ -5,6 +5,7 @@ capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
 local servers = { 'pylsp', 'eslint' }
 
 lspconfig.pylsp.setup{
+    capabilities = capabilities,
     settings = {
         pylsp = {
             plugins = {
@@ -28,6 +29,7 @@ lspconfig.pylsp.setup{
     },
 }
 lspconfig.eslint.setup({
+    capabilities = capabilities,
     on_attach = function(client, bufnr)
         vim.api.nvim_create_autocmd("BufWritePre", {
             buffer = bufnr,
@@ -36,8 +38,3 @@ lspconfig.eslint.setup({
     end,
 })
 
-for _, lsp in ipairs(servers) do
-    lspconfig[lsp].setup {
-        capabilities = capabilities
-    }
-end
