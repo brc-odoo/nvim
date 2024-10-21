@@ -36,5 +36,8 @@ lspconfig.eslint.setup({
             command = "EslintFixAll",
         })
     end,
+    settings = {
+        workingDirectory = { mode = "auto"}
+    }
 })
 
