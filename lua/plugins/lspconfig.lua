@@ -10,7 +10,7 @@ return {
     config = function()
         require("mason").setup()
         require("mason-lspconfig").setup({
-            ensure_installed = { "pylsp", "eslint", "lemminx", "lua_ls", "jinja_lsp" }
+            ensure_installed = { "pylsp", "denols", "lemminx", "jinja_lsp" }
         })
     end,
 }

@@ -2,9 +2,10 @@ local lspconfig = require('lspconfig')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
 
-local servers = { 'pylsp', 'eslint' }
+local servers = { 'pylsp', 'denols' }
 
 lspconfig.pylsp.setup{
+    cmd = {'/home/mudkip/.local/bin/pylsp'}, 
     capabilities = capabilities,
     settings = {
         pylsp = {
@@ -28,16 +29,7 @@ lspconfig.pylsp.setup{
         debounce_text_changes = 200,
     },
 }
-lspconfig.eslint.setup({
-    capabilities = capabilities,
-    on_attach = function(client, bufnr)
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            command = "EslintFixAll",
-        })
-    end,
-    settings = {
-        workingDirectory = { mode = "auto"}
-    }
-})
 
+lspconfig.denols.setup{
+    on_attach = on_attach
+}
