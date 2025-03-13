@@ -12,7 +12,7 @@ end, {silent = true})
 
 require("luasnip.loaders.from_vscode").lazy_load({
 	paths = {
-	"~/.config/nvim/snippets"	
+	"~/.config/nvim/snippets"
 	},
 	include = { "python", "javascript", "xml" },
 })
