@@ -5,8 +5,8 @@ capabilities.workspace.didChangeWatchedFiles.dynamicRegistration = true
 local servers = { 'pylsp', 'denols', 'ts_ls', 'dockerls', 'lua_ls', 'lemminx', 'tailwindcss' }
 
 lspconfig.pylsp.setup{
-    -- cmd = {'/home/mudkip/.local/bin/pylsp'},
-    cmd = {'/usr/bin/pylsp'},
+    cmd = {'/home/mudkip/.local/bin/pylsp'},
+    -- cmd = {'/usr/bin/pylsp'},
     capabilities = capabilities,
     settings = {
         pylsp = {
