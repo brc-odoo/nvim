@@ -5,7 +5,6 @@ require("mudkip.remap")
 vim.g.linux = vim.fn.has('linux') == 1
 vim.g.wsl = vim.fn.has('wsl') == 1
 
-vim.g.cmp = true
 
 -- vim.opt.statuscolumn = "%!v:lua.statuscolumn. myStatusColumn()"
 

@@ -1,5 +1,4 @@
-local ts_config = require("nvim-treesitter.configs")
-ts_config.setup({
+require("nvim-treesitter.configs").setup({
     ensure_installed = {
         "c", "lua", "vim", "vimdoc", "query", "javascript", "html", "xml", "python",
         "yaml", "typescript", "bash", "jsdoc",
@@ -12,4 +11,4 @@ ts_config.setup({
         additional_vim_regex_highlighting = { "markdown" },
     },
 })
-vim.treesitter.language.register('html', 'xml')
+-- vim.treesitter.language.register('html', 'xml')
