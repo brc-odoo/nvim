@@ -1,5 +1,7 @@
 require("mudkip.remap")
 
+vim.g.have_nerd_font = true
+
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -12,7 +14,7 @@ vim.opt.updatetime = 250
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4 
+vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
 vim.opt.expandtab = true
 
