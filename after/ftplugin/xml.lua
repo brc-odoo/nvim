@@ -1,2 +1,0 @@
--- vim.opt.smartindent = false
--- vim.cmd([[TSDisable indent]])

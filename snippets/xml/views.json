@@ -31,7 +31,7 @@
             "\t</field>",
             "</record>"
         ]
-    }
+    },
     "Owl Component": {
         "prefix": "component",
         "language": "xml",
