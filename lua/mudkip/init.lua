@@ -1,5 +1,5 @@
 require("mudkip.remap")
-local statuscolumn = require("mudkip.statuscolumn")
+-- local statuscolumn = require("mudkip.statuscolumn")
 
 -- OS Info
 vim.g.linux = vim.fn.has('linux') == 1
