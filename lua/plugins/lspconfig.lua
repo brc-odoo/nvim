@@ -26,7 +26,6 @@ return {
     require("mason-lspconfig").setup({
         ensure_installed = {
             "pylsp",
-            "denols",
             "lemminx",
             "eslint",
             "lua_ls",
